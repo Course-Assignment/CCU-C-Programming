@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>Directory</title>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+    function addForm() {
+        var name = document.getElementById("name").value;
+        var studentID = document.getElementById("studenID").value;
+        var phone = document.getElementById("phone").value;    
+
+        if(name == "" || studentID == "" || phone == ""){
+        	alert("您有欄位沒有輸入內容!");
+        	return;
+        }
+
+        var table = document.getElementById("results");
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+
+        cell1.innerHTML = name;
+        cell2.innerHTML = studentID;        
+        cell3.innerHTML = phone;
+        cell1.style.textAlign = "center";
+        cell2.style.textAlign = "center";
+        cell3.style.textAlign = "center";
+
+        var tds = table.getElementsByTagName("td");
+		for(var i = 0; i < tds.length; i++) {
+    		tds[i].onmouseover = function() {
+       			this.parentNode.style.backgroundColor = "#BFEFFF";
+    		}
+    		tds[i].onmouseout = function() {
+      			this.parentNode.style.backgroundColor = "#FFFFFF";  
+    		}
+		}
+    }
+</script>
+</head>
+<body>
+<form name="order" id="order">
+    <table>
+        <tr>
+            <td>
+                <label for="name">姓名:</label>
+            </td>
+            <td>
+                <input id="name" name="name" title="Input the name" type="text" width="200px" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="studenID">學號:</label>
+            </td>
+            <td>
+                <input id="studenID" name="studenID" title="Input the studenID" width="200px" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="phone">電話:</label>
+            </td>
+            <td>
+                <input id="phone" name="phone" title="Input the phone" width="200px" />
+            </td>
+        </tr>
+    </table>
+    <br>
+    <button type="button" onClick="addForm();"/>新增至表格</button>
+</form>
+<br>
+
+<table id="results" width="450" border="1">
+    <thead>
+    <tr>
+    	<th colspan="3">通訊錄</th>
+    </tr>
+    <tr>
+        <th scope="col" width="150">姓名</th>
+        <th scope="col" width="150">學號</th>
+        <th scope="col" width="150">電話</th>
+    </tr>
+    </thead>
+</table>
+
+</body>
+</html>

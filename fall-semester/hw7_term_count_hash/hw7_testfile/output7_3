@@ -1,0 +1,16 @@
+find	apple
+----------
+apple	1
+----------
+find	fire
+----------
+fire	2
+----------
+find	hahauccu
+----------
+Not	found!
+----------
+find	hahauccu
+----------
+Not	found!
+----------

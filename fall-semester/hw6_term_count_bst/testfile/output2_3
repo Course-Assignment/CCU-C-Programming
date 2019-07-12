@@ -1,0 +1,20 @@
+inorder
+----------
+apple	1
+banana	5
+cat	3
+dog	4
+egg	9
+fire	2
+good	6
+----------
+count
+----------
+egg	9
+good	6
+banana	5
+dog	4
+cat	3
+fire	2
+apple	1
+----------
